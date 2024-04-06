@@ -72,7 +72,7 @@ app.get("/subtraction", (req,res)=>{
             throw new Error("n2 incorrectly defined");
         }
 
-        logger.info('Parameters '+n1+' and '+n2+' received for addition');
+        logger.info('Parameters '+n1+' and '+n2+' received for substraction');
         const result = sub(n1,n2);
         res.status(200).json({statuscocde:200, data: result });
     } catch(error) {
@@ -95,7 +95,7 @@ app.get("/multiplication", (req,res)=>{
             throw new Error("n2 incorrectly defined");
         }
 
-        logger.info('Parameters '+n1+' and '+n2+' received for addition');
+        logger.info('Parameters '+n1+' and '+n2+' received for multiplication');
         const result = mul(n1,n2);
         res.status(200).json({statuscocde:200, data: result });
     } catch(error) {
@@ -118,7 +118,7 @@ app.get("/division", (req,res)=>{
             throw new Error("n2 incorrectly defined");
         }
 
-        logger.info('Parameters '+n1+' and '+n2+' received for addition');
+        logger.info('Parameters '+n1+' and '+n2+' received for division');
         const result = div(n1,n2);
         res.status(200).json({statuscocde:200, data: result });
     } catch(error) {
@@ -126,9 +126,6 @@ app.get("/division", (req,res)=>{
         res.status(500).json({statuscocde:500, msg: error.toString() })
     }
 });
-
-
-
 const port=3040;
 app.listen(port,()=> {
     console.log("hello i'm listening to port"+port);
